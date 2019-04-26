@@ -11,9 +11,9 @@ namespace AESProgram {
     class Program {
 
         //初期ベクトル
-        const string AesIV = @"yokohamahyumanis";
+        const string AesIV = @"kanagawayokohama";
         //暗号化鍵
-        const string AesKey = @"yokohamahyumanisseihokamakanagaw";
+        const string AesKey = @"kanagawayokohamaturuyatyouhumani";
 
         private byte[] Encrypt(string text) {
 
@@ -57,7 +57,7 @@ namespace AESProgram {
             aes.Padding = PaddingMode.PKCS7;
 
 
-            //暗号化
+            //複合化
             byte[] DecriptText = aes.CreateDecryptor().TransformFinalBlock(byteText, 0, byteText.Length);
 
             //Base64形式(64種類の英数字で表現)で返す
